@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "9f9b3df5-99b8-4a52-8dd6-6b1cc0a5a440",
+		"name": "netology ticket api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14812450"
+	},
+	"item": [
+		{
+			"name": "method=allTickets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "*",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SITE}}?method=allTickets",
+					"host": [
+						"{{SITE}}"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "allTickets"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "?method=ticketById&id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "*",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SITE}}?method=ticketById&id=1",
+					"host": [
+						"{{SITE}}"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "ticketById"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "?method=deleteById&id=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SITE}}?method=deleteById&id=1",
+					"host": [
+						"{{SITE}}"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "deleteById"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "?method=createTicket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Не работает почта\",\n  \"description\": \"В операционном отделе перестал работать email\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SITE}}?method=createTicket",
+					"host": [
+						"{{SITE}}"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "createTicket"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "?method=updateById&id=",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{SITE}}?method=updateById&id=3",
+					"host": [
+						"{{SITE}}"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "updateById"
+						},
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SITE",
+			"value": "http://localhost:6767/ticket",
+			"type": "string"
+		}
+	]
+}
